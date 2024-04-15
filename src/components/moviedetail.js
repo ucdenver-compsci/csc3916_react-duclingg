@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { BsStarFill } from 'react-icons/bs'
 import { Image } from 'react-bootstrap';
-import ReviewForm from './review.js';
+import { ReviewForm } from './review.js';
 
 class MovieDetail extends Component {
 
