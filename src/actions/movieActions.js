@@ -70,3 +70,7 @@ export function fetchMovies() {
         }).catch((e) => console.log(e));
     }
 }
+
+export function saveReview(movieId, reviewData) {
+    
+}
