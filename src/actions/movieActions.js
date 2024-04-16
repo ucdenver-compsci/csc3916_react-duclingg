@@ -73,7 +73,7 @@ export function fetchMovies() {
 
 export function saveReview(movieId, reviewData) {
     return dispatch => {
-        return fetch('${env.REACT_APP_API_URL}/reviews', {
+        return fetch(`${env.REACT_APP_API_URL}/reviews`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -84,7 +84,7 @@ export function saveReview(movieId, reviewData) {
                 movieId: movieId,
                 username: localStorage.getItem('username'),
                 review: reviewData.review,
-                rating: reviewData.string
+                rating: reviewData.rating
             }),
             mode: 'cors'
         }).then((response) => {
@@ -94,6 +94,6 @@ export function saveReview(movieId, reviewData) {
             return response.json()
         }).then(() => {
             dispatch(fetchMovie(movieId));
-        }).catch((e) => console.log(e))
+        }).catch((e) => console.log(e));
     }
 }
